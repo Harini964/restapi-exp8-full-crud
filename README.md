@@ -1,24 +1,31 @@
-![WhatsApp Image 2025-09-13 at 16 35 28_5dc535b4](https://github.com/user-attachments/assets/306e8b95-0d03-4486-8aa9-7274d58b6274)
+![WhatsApp Image 2025-09-13 at 16 39 35_64af2510](https://github.com/user-attachments/assets/d243e08d-752d-45f4-948b-f7f4eb46a47a)
+![WhatsApp Image 2025-09-13 at 16 40 18_8becca4b](https://github.com/user-attachments/assets/7dd75eb9-7636-4320-a4c5-7a9c1a606b4c)
+![WhatsApp Image 2025-09-13 at 16 44 08_9329d77c](https://github.com/user-attachments/assets/97e45a61-7352-4967-8dc6-77f287a7ee4c)
+![WhatsApp Image 2025-09-13 at 16 44 29_24fe3379](https://github.com/user-attachments/assets/1ffabb7c-f3a3-4d60-807c-45fb04e83c5d)
 
 
-API Testing – GET /api/students
+The following screenshots show the working of the Student CRUD REST API developed using Express + Mongoose and tested in Postman:
 
-This screenshot demonstrates the successful execution of the GET request to retrieve all student records from the database. Using Postman, we accessed the endpoint at:
+Create (POST /api/students)
 
-http://localhost:3000/api/students
+Added a new student record with fields name, age, and major.
 
-The server responded with a 200 OK status, indicating that the request was processed successfully. The response is in JSON format and shows an array of student objects, each containing the following fields:
+API responded with 201 Created and returned the saved student object with _id.
 
-_id: Unique identifier assigned by MongoDB.
+Read (GET /api/students)
 
-name: Student’s name.
+Retrieved all students stored in the MongoDB collection.
 
-age: Student’s age.
+API responded with 200 OK and returned an array of student objects.
 
-major: Student’s major or field of study.
+Update (PUT /api/students/:id)
 
-createdAt: Timestamp of when the record was created.
+Updated an existing student’s details using their unique _id.
 
-__v: Internal version key used by Mongoose.
+API responded with 200 OK and returned the updated student object.
 
-This confirms that the API is working correctly and is able to fetch stored student data from the MongoDB collection.
+Delete (DELETE /api/students/:id)
+
+Deleted a student record from the database using _id.
+
+API responded with 200 OK and returned a success message.
